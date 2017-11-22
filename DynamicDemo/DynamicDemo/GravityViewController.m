@@ -11,6 +11,8 @@
 @interface GravityViewController ()<UICollisionBehaviorDelegate,UIGestureRecognizerDelegate>
 /**animator*/
 @property(nonatomic,strong)UIDynamicAnimator *animator;
+/**吸附*/
+@property(nonatomic,strong)UIAttachmentBehavior *attchment;
 /**平移手势*/
 @property(nonatomic,strong)UIPanGestureRecognizer *panGes;
 /**UIImageView*/
@@ -23,8 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.panGes = [[UIPanGestureRecognizer alloc]init];
-    [self.iconImageView addGestureRecognizer:self.panGes];
+    self.panGes = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(usePanGes:)];
+    [self.view addGestureRecognizer:self.panGes];
+
     self.panGes.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.iconImageView];
@@ -87,8 +90,8 @@
 -(void)test3
 {
     CGPoint centerPoint = CGPointMake(self.iconImageView.center.x, self.iconImageView.center.y);
-    UIAttachmentBehavior *attchment = [[UIAttachmentBehavior alloc]initWithItem:self.iconImageViewTwo attachedToAnchor:centerPoint];
-    [self.animator addBehavior:attchment];
+    self.attchment = [[UIAttachmentBehavior alloc]initWithItem:self.iconImageViewTwo attachedToAnchor:centerPoint];
+    [self.animator addBehavior:self.attchment];
     
 }
 
@@ -103,7 +106,12 @@
     NSLog(@"碰撞结束");
 }
 #pragma mark - 平移手势
-
+-(void)usePanGes:(UIPanGestureRecognizer *)panGeSender
+{
+    CGPoint point = [panGeSender locationInView:self.view];
+    self.iconImageView.center = point;
+    [self.attchment setAnchorPoint:point];
+}
 #pragma mark - getter&setter
 -(UIImageView *)iconImageView
 {

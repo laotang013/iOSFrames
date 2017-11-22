@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GravityViewController.h"
+#import "UIAttachmentBehaviorController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 
@@ -44,6 +45,10 @@
     if (indexPath.row == 0) {
         GravityViewController *gravityVC = [[GravityViewController alloc]init];
         [self.navigationController pushViewController:gravityVC animated:YES];
+    }else if (indexPath.row == 1)
+    {
+        UIAttachmentBehaviorController *attachVC = [[UIAttachmentBehaviorController alloc]init];
+        [self.navigationController pushViewController:attachVC animated:YES];
     }
 }
 - (void)didReceiveMemoryWarning {

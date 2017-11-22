@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C96497DA1FC522A300A4B446 /* UIAttachmentBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96497D91FC522A300A4B446 /* UIAttachmentBehaviorController.m */; };
 		C98A00911FBE8B7F00965596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A00901FBE8B7F00965596 /* AppDelegate.m */; };
 		C98A00941FBE8B7F00965596 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98A00931FBE8B7F00965596 /* ViewController.m */; };
 		C98A00971FBE8B7F00965596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98A00951FBE8B7F00965596 /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C96497D81FC522A300A4B446 /* UIAttachmentBehaviorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAttachmentBehaviorController.h; sourceTree = "<group>"; };
+		C96497D91FC522A300A4B446 /* UIAttachmentBehaviorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAttachmentBehaviorController.m; sourceTree = "<group>"; };
 		C98A008C1FBE8B7F00965596 /* DynamicDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98A008F1FBE8B7F00965596 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C98A00901FBE8B7F00965596 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				C98A00931FBE8B7F00965596 /* ViewController.m */,
 				C98A00A51FBE8E1300965596 /* GravityViewController.h */,
 				C98A00A61FBE8E1300965596 /* GravityViewController.m */,
+				C96497D81FC522A300A4B446 /* UIAttachmentBehaviorController.h */,
+				C96497D91FC522A300A4B446 /* UIAttachmentBehaviorController.m */,
 				C98A00951FBE8B7F00965596 /* Main.storyboard */,
 				C98A009A1FBE8B7F00965596 /* LaunchScreen.storyboard */,
 				C98A009D1FBE8B7F00965596 /* Info.plist */,
@@ -148,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C98A00941FBE8B7F00965596 /* ViewController.m in Sources */,
+				C96497DA1FC522A300A4B446 /* UIAttachmentBehaviorController.m in Sources */,
 				C98A009F1FBE8B7F00965596 /* main.m in Sources */,
 				C98A00911FBE8B7F00965596 /* AppDelegate.m in Sources */,
 				C98A00A71FBE8E1300965596 /* GravityViewController.m in Sources */,
